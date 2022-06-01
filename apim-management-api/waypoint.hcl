@@ -7,7 +7,7 @@ runner {
     enabled = true   
     data_source "git" {
         url  = "https://github.com/erickriegel/gravitee.git"
-        ref  = var.datacenter
+        ref  = "henix_docker_platform_dev"
         path = "apim-management-api"
         ignore_changes_outside_path = true
     }
