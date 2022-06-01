@@ -6,7 +6,7 @@ labels = { "domaine" = "gravitee" }
 runner {
     enabled = true   
     data_source "git" {
-        url  = "https://github.com/ansforge/gravitee.git"
+        url  = "https://github.com/erickriegel/gravitee.git"
         ref  = "var.datacenter"
         path = "apim-gateway-bridge"
         ignore_changes_outside_path = true
@@ -43,7 +43,7 @@ app "gravitee/apim-gateway-bridge" {
 
 variable "datacenter" {
     type = string
-    default = "dc1"
+    default = "henix_docker_platform_dev"
 }
 
 variable "user_java_opts" {
