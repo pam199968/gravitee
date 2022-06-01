@@ -22,7 +22,7 @@ app "gravitee/apim-portal-ui" {
     build {
         use "docker-pull" {
 			image = "graviteeio/apim-portal-ui"
-			tag   = "3.15.7"
+			tag   = "3.10.15"
 			disable_entrypoint = true
         }
     }
@@ -34,7 +34,7 @@ app "gravitee/apim-portal-ui" {
                 datacenter = var.datacenter
 				portal_ui_fqdn = var.portal_ui_fqdn
 				image = "graviteeio/apim-portal-ui"
-				tag = "3.15.7"
+				tag = "3.10.15"
             })
         }
     }
