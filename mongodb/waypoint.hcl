@@ -5,7 +5,7 @@ labels = { "domaine" = "gravitee" }
 runner {
     enabled = true
     data_source "git" {
-        url  = "https://github.com/ansforge/gravitee.git"
+        url  = "https://github.com/erickriegel/gravitee.git"
         ref  = "var.datacenter"
         path = "mongodb"
         ignore_changes_outside_path = true
@@ -39,5 +39,5 @@ app "gravitee/mongodb" {
 
 variable "datacenter" {
     type  = string
-  default = "henix_docker_platform_integ"
+  default = "henix_docker_platform_dev"
 }
