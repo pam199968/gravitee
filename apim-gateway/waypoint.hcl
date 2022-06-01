@@ -22,7 +22,7 @@ app "gravitee/apim-gateway" {
     build {
         use "docker-pull" {
             image = "graviteeio/apim-gateway"
-            tag   = "3.15.7"
+            tag   = "3.10.15"
             disable_entrypoint = true
         }
     }
@@ -35,7 +35,7 @@ app "gravitee/apim-gateway" {
                 user_java_opts = var.user_java_opts
                 apim_gateway_fqdn = var.apim_gateway_fqdn
                 image = "graviteeio/apim-gateway"
-                tag = "3.15.7"
+                tag = "3.10.15"
                 min_count = var.min_count
                 max_count = var.max_count
                 cooldown = var.cooldown
