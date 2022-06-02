@@ -40,7 +40,7 @@ gravitee.management.mongodb.port = {{ range service "gravitee-mongodb" }}{{.Port
 gravitee.management.mongodb.authSource  = admin
 gravitee.management.mongodb.username = {{ with secret "gravitee/mongodb" }}{{.Data.data.root_user}}{{end}}
 gravitee.management.mongodb.password = {{ with secret "gravitee/mongodb" }}{{.Data.data.root_pass}}{{end}}
-gravitee.analytics.elasticsearch.endpoints.0=http://{{ range service "gravitee-elasticsearch" }}{{.Address}}:{{.Port}}{{end}}
+gravitee_analytics_elasticsearch_endpoints_0=http://{{ range service "gravitee-elasticsearch" }}{{.Address}}:{{.Port}}{{end}}
 
 gravitee.analytics.elasticsearch.security.username={{ with secret "gravitee/elasticsearch" }}{{.Data.data.root_user}}{{end}}
 gravitee.analytics.elasticsearch.security.password={{ with secret "gravitee/elasticsearch" }}{{.Data.data.root_pass}}{{end}}
