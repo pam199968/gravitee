@@ -22,7 +22,7 @@ app "gravitee/apim-management-api" {
     build {
         use "docker-pull" {
             image = "graviteeio/apim-management-api"
-            tag   = "3.10.15"
+            tag   = "3.17.3"
             disable_entrypoint = true
         }
     }
@@ -35,7 +35,7 @@ app "gravitee/apim-management-api" {
 		apim_api_fqdn = var.apim_api_fqdn
 		user_java_opts = var.user_java_opts
 		image = "graviteeio/apim-management-api"
-		tag = "3.10.15"
+		tag = "3.17.3"
             })
         }
     }
