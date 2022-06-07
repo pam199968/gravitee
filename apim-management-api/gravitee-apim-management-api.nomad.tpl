@@ -81,7 +81,7 @@ EOD
                 }
                 check {
                     name        = "alive"
-                    type        = "http"
+                    type        = "tcp"
                     interval    = "10s"
                     timeout     = "5s"
                     port 	= "apim-manager-api"
