@@ -21,12 +21,29 @@ job "gravitee-apim-management-api" {
             port "apim-manager-api" { to = 8083 }
         }
         task "apim-management-api" {
+	
+	    artifact {
+                source      = "http://repo.proxy-dev-forge.asip.hst.fluxus.net/artifactory/ext-release-local/io/gravitee/gravitee-resource-oauth2-provider-generic-1.16.2.zip"
+                options {
+    			archive = false
+			checksum = "md5:784cf8f3aa19999a69b395ce96bc74dc"
+  		}
+	    }
             driver = "docker"
 
             config {
                 image = "${image}:${tag}"
                 ports = ["apim-manager-api"]
             }
+	    mount {
+		type = "bind"
+		# override plugin with proxy compatible version
+		target = "/opt/graviteeio-management-api/plugins/gravitee-resource-oauth2-provider-generic-1.16.1.zip"
+		source = "local/gravitee-resource-oauth2-provider-generic-1.16.2.zip"
+		readonly = false
+		bind_options {
+			propagation = "rshared"
+		}
 
             resources {
                 cpu = 1000
