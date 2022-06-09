@@ -34,15 +34,16 @@ job "gravitee-apim-management-api" {
             config {
                 image = "${image}:${tag}"
                 ports = ["apim-manager-api"]
-            }
-	    mount {
-		type = "bind"
-		# override plugin with proxy compatible version
-		target = "/opt/graviteeio-management-api/plugins/gravitee-resource-oauth2-provider-generic-1.16.1.zip"
-		source = "local/gravitee-resource-oauth2-provider-generic-1.16.2.zip"
-		readonly = false
-		bind_options {
-			propagation = "rshared"
+
+		    mount {
+			type = "bind"
+			# override plugin with proxy compatible version
+			target = "/opt/graviteeio-management-api/plugins/gravitee-resource-oauth2-provider-generic-1.16.1.zip"
+			source = "local/gravitee-resource-oauth2-provider-generic-1.16.2.zip"
+			readonly = false
+			bind_options {
+				propagation = "rshared"
+			}
 		}
 
             resources {
