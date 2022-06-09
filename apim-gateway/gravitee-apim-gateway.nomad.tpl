@@ -77,6 +77,7 @@ job "gravitee-apim-gateway" {
 				propagation = "rshared"
 			}
 	   }
+	}
 
             resources {
                 cpu = 1000
