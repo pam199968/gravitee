@@ -45,6 +45,7 @@ job "gravitee-apim-management-api" {
 				propagation = "rshared"
 			}
 		}
+	   }
 
             resources {
                 cpu = 1000
