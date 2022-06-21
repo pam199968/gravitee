@@ -22,7 +22,7 @@ app "gravitee/apim-gateway-bridge" {
     build {
         use "docker-pull" {
             image = "graviteeio/apim-gateway"
-            tag   = "3.10.15"
+            tag   = "3.15.9"
             disable_entrypoint = true
         }
     }
@@ -35,7 +35,7 @@ app "gravitee/apim-gateway-bridge" {
                 user_java_opts = var.user_java_opts
                 apim_gateway_bridge_fqdn = var.apim_gateway_bridge_fqdn
                 image = "graviteeio/apim-gateway"
-                tag = "3.10.15"
+                tag = "3.15.9"
             })
         }
     }
