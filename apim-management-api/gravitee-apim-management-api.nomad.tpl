@@ -31,7 +31,7 @@ job "gravitee-apim-management-api" {
 	    }
 	    
 	    artifact {
-	    	source	= "http://repo.proxy-dev-forge.asip.hst.fluxus.net/artifactory/repo-snapshots/fr/ans/psc/generateVIHF/1.0-SNAPSHOT/generateVIHF-1.0-SNAPSHOT.zip"
+	    	source	= "http://repo.proxy-dev-forge.asip.hst.fluxus.net/artifactory/repo-snapshots/fr/ans/psc/generateVIHF/1.1-SNAPSHOT/generateVIHF-1.1-SNAPSHOT.zip"
 		options {
 			archive = false
 			checksum = "md5:0e0a69d3f59aecf4a41cee6ad9714684"
@@ -56,8 +56,8 @@ job "gravitee-apim-management-api" {
 		
 		mount {
 			type = "bind"
-			target = "/opt/graviteeio-management-api/plugins/generateVIHF-1.0-SNAPSHOT.zip"
-			source = "local/generateVIHF-1.0-SNAPSHOT.zip"
+			target = "/opt/graviteeio-management-api/plugins/generateVIHF-1.1-SNAPSHOT.zip"
+			source = "local/generateVIHF-1.1-SNAPSHOT.zip"
 			readonly = false
 			bind_options {
 				propagation = "rshared"
