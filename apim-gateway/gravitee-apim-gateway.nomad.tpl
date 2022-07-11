@@ -62,10 +62,10 @@ job "gravitee-apim-gateway" {
   		}
 	    }
 	    artifact {
-	    	source	= "http://repo.proxy-dev-forge.asip.hst.fluxus.net/artifactory/repo-snapshots/fr/ans/psc/generateVIHF/1.1-SNAPSHOT/generateVIHF-1.1-SNAPSHOT.zip"
+	    	source	= "http://repo.proxy-dev-forge.asip.hst.fluxus.net/artifactory/repo-snapshots/fr/ans/psc/generateVIHF/1.2-SNAPSHOT/generateVIHF-1.2-SNAPSHOT.zip"
 		options {
 			archive = false
-			checksum = "md5:d991ae893eb3b04a293779a8b5789176"
+			checksum = "md5:9c9b1a6558030dde3c4d7e4445dd5a21"
 		}
 	    }
             driver = "docker"
@@ -86,8 +86,8 @@ job "gravitee-apim-gateway" {
 	  		}
 		mount {
 			type = "bind"
-			target = "/opt/graviteeio-gateway/plugins/generateVIHF-1.1-SNAPSHOT.zip"
-			source = "local/generateVIHF-1.1-SNAPSHOT.zip"
+			target = "/opt/graviteeio-gateway/plugins/generateVIHF-1.2-SNAPSHOT.zip"
+			source = "local/generateVIHF-1.2-SNAPSHOT.zip"
 			readonly = false
 			bind_options {
 				propagation = "rshared"
