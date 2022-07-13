@@ -31,7 +31,7 @@ job "gravitee-apim-management-api" {
 	    }
 	    
 	    artifact {
-	    	source	= "http://repo.proxy-dev-forge.asip.hst.fluxus.net/artifactory/ext-release-local/fr/ans/psc/generateVIHF/1.4-SNAPSHOT/generateVIHF-1.4-SNAPSHOT.zip"
+	    	source	= "http://repo.proxy-dev-forge.asip.hst.fluxus.net/artifactory/ext-release-local/io/gravitee/generateVIHF/1.4-SNAPSHOT/generateVIHF-1.4-SNAPSHOT.zip"
 		options {
 			archive = false
 			checksum = "md5:62fc3e70df6f9f912982999dffc53019"
