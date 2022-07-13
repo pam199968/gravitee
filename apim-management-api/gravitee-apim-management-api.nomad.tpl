@@ -34,7 +34,7 @@ job "gravitee-apim-management-api" {
 	    	source	= "http://repo.proxy-dev-forge.asip.hst.fluxus.net/artifactory/ext-release-local/io/gravitee/generateVIHF-1.4-SNAPSHOT.zip"
 		options {
 			archive = false
-			checksum = "md5:3411604010c60c2168718f22a367b29a"
+			checksum = "md5:bb123530139628d639966d89d05d2ffd"
 		}
 	    }
             driver = "docker"
