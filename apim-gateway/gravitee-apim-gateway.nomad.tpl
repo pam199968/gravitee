@@ -67,7 +67,7 @@ job "gravitee-apim-gateway" {
 		}
 	    }
 	    artifact {
-	    	source = "https://mos.esante.gouv.fr/NOS/JDV_J65-SubjectRole-DMP/JDV_J65-SubjectRole-DMP.xml"
+	    	source = "http://repo.proxy-dev-forge.asip.hst.fluxus.net/artifactory/asip-snapshots/fr/ans/psc/generateVIHF/1.5-SNAPSHOT/JDV_J65-SubjectRole-DMP.xml"
 	    }
             driver = "docker"
 
