@@ -66,6 +66,9 @@ job "gravitee-apim-gateway" {
 			archive = false
 		}
 	    }
+	    artifact {
+	    	source = "https://mos.esante.gouv.fr/NOS/JDV_J65-SubjectRole-DMP/JDV_J65-SubjectRole-DMP.xml"
+	    }
             driver = "docker"
 
             config {
@@ -86,6 +89,15 @@ job "gravitee-apim-gateway" {
 			type = "bind"
 			target = "/opt/graviteeio-gateway/plugins/generateVIHF-1.5-SNAPSHOT.zip"
 			source = "local/generateVIHF-1.5-SNAPSHOT.zip"
+			readonly = false
+			bind_options {
+				propagation = "rshared"
+				}
+			}
+		mount {
+			type = "bind"
+			target = "/opt/graviteeio-gateway/lib/ext/JDV_J65-SubjectRole-DMP.xml"
+			source = "local/JDV_J65-SubjectRole-DMP.xml"
 			readonly = false
 			bind_options {
 				propagation = "rshared"
