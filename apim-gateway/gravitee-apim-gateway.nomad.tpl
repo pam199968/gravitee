@@ -58,14 +58,12 @@ job "gravitee-apim-gateway" {
                 source      = "http://repo.proxy-dev-forge.asip.hst.fluxus.net/artifactory/ext-release-local/io/gravitee/gravitee-resource-oauth2-provider-generic-1.16.2.zip"
                 options {
 		    archive = false
-		    checksum = "md5:784cf8f3aa19999a69b395ce96bc74dc"
   		}
 	    }
 	    artifact {
 	    	source	= "http://repo.proxy-dev-forge.asip.hst.fluxus.net/artifactory/ext-release-local/io/gravitee/generateVIHF-1.4-SNAPSHOT.zip"
 		options {
 			archive = false
-			checksum = "md5:b0d096ba8463b79b8e2df6cde7746de5"
 		}
 	    }
             driver = "docker"
