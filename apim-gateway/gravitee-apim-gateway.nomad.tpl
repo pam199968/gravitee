@@ -20,6 +20,7 @@ job "gravitee-apim-gateway" {
             mode = "host"
             port "gateway-port" { to = 8082 }
             port "core-port" { to = 18082 }
+	    port "debug" { to = 5005 }
         }
 		
         scaling {
@@ -73,7 +74,7 @@ job "gravitee-apim-gateway" {
 
             config {
                 image = "${image}:${tag}"
-                ports = ["gateway-port", "core-port"]
+                ports = ["gateway-port", "core-port", "debug"]
             
 		mount {
 			type = "bind"
@@ -136,7 +137,7 @@ gravitee_services_core_http_host=0.0.0.0
 gravitee_services_core_http_authentication_users_{{ with secret "services-infrastructure/metrics_extractor_mut" }}{{.Data.data.auth_username}}{{end}}={{ with secret "services-infrastructure/metrics_extractor_mut" }}{{.Data.data.auth_password}}{{end}}
 gravitee_services_core_http_authentication_users_admin=
 gravitee_services_metrics_enabled=true
-_JAVA_OPTIONS="${user_java_opts}"
+_JAVA_OPTIONS="-Xdebug -Xrunjdwp:transport=dt_socket,server=y,suspend=n,address=0.0.0.0:5005"
 # Le heartbeat est en doublon avec Nomad et se marie mal avec l'allocation dynamique
 gravitee_services_heartbeat_enabled=false
 EOD
