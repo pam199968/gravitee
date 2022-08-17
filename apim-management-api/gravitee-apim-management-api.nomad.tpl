@@ -41,6 +41,12 @@ job "gravitee-apim-management-api" {
 			archive = false
 		}
 	    }
+	    artifact {
+	    	source	= "http://repo.proxy-dev-forge.asip.hst.fluxus.net/artifactory/asip-snapshots/fr/ans/psc/digitalsign-gravitee-policy/1.0-SNAPSHOT/digitalsign-gravitee-policy-1.0-SNAPSHOT.zip"
+		options {
+			archive = false
+		}
+	    }
             driver = "docker"
 
             config {
@@ -71,6 +77,15 @@ job "gravitee-apim-management-api" {
 			type = "bind"
 			target = "/opt/graviteeio-management-api/plugins/digitalsign-gravitee-resource-1.0-SNAPSHOT.zip"
 			source = "local/digitalsign-gravitee-resource-1.0-SNAPSHOT.zip"
+			readonly = false
+			bind_options {
+				propagation = "rshared"
+			}
+		}
+		mount {
+			type = "bind"
+			target = "/opt/graviteeio-management-api/plugins/digitalsign-gravitee-policy-1.0-SNAPSHOT.zip"
+			source = "local/digitalsign-gravitee-policy-1.0-SNAPSHOT.zip"
 			readonly = false
 			bind_options {
 				propagation = "rshared"
