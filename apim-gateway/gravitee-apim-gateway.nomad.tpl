@@ -72,6 +72,9 @@ job "gravitee-apim-gateway" {
 	    }
 	    artifact {
 	    	source = "http://repo.proxy-dev-forge.asip.hst.fluxus.net/artifactory/asip-snapshots/fr/ans/psc/digitalsign-gravitee-resource/1.0-SNAPSHOT/digitalsign-gravitee-resource-1.0-SNAPSHOT.zip"
+		options {
+			archive = false
+		}
 	    }
             driver = "docker"
 
