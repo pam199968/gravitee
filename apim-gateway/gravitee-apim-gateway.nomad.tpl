@@ -125,7 +125,6 @@ job "gravitee-apim-gateway" {
 				propagation = "rshared"
 				}
 			}
-		}
 		mount {
 			type = "bind"
 			target = "/opt/graviteeio-gateway/plugins/digitalsign-gravitee-policy-1.0-SNAPSHOT.zip"
