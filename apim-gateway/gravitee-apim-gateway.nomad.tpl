@@ -70,6 +70,9 @@ job "gravitee-apim-gateway" {
 	    artifact {
 	    	source = "http://repo.proxy-dev-forge.asip.hst.fluxus.net/artifactory/asip-snapshots/fr/ans/psc/generateVIHF/1.5-SNAPSHOT/JDV_J65-SubjectRole-DMP.xml"
 	    }
+	    artifact {
+	    	source = "http://repo.proxy-dev-forge.asip.hst.fluxus.net/artifactory/asip-snapshots/fr/ans/psc/digitalsign-gravitee-resource/1.0-SNAPSHOT/digitalsign-gravitee-resource-1.0-SNAPSHOT.zip"
+	    }
             driver = "docker"
 
             config {
@@ -99,6 +102,15 @@ job "gravitee-apim-gateway" {
 			type = "bind"
 			target = "/opt/graviteeio-gateway/lib/ext/JDV_J65-SubjectRole-DMP.xml"
 			source = "local/JDV_J65-SubjectRole-DMP.xml"
+			readonly = false
+			bind_options {
+				propagation = "rshared"
+				}
+			}
+		mount {
+			type = "bind"
+			target = "/opt/graviteeio-gateway/plugins/digitalsign-gravitee-resource-1.0-SNAPSHOT.zip"
+			source = "local/digitalsign-gravitee-resource-1.0-SNAPSHOT.zip"
 			readonly = false
 			bind_options {
 				propagation = "rshared"
