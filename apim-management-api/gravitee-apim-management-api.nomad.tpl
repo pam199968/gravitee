@@ -47,6 +47,12 @@ job "gravitee-apim-management-api" {
 			archive = false
 		}
 	    }
+	    artifact {
+	    	source = "http://repo.proxy-dev-forge.asip.hst.fluxus.net/artifactory/asip-snapshots/fr/ans/psc/digital-sign-resource-api/1.0-SNAPSHOT/digital-sign-resource-api-1.0-SNAPSHOT.zip"
+		options {
+			archive = false
+		}
+	    }
             driver = "docker"
 
             config {
@@ -90,6 +96,15 @@ job "gravitee-apim-management-api" {
 			bind_options {
 				propagation = "rshared"
 			}
+		}
+		mount {
+			type = "bind"
+			target = "/opt/graviteeio-gateway/plugins/digital-sign-resource-api-1.0-SNAPSHOT.zip"
+			source = "local/digital-sign-resource-api-1.0-SNAPSHOT.zip"
+			readonly = false
+			bind_options {
+				propagation = "rshared"
+				}
 		}
 	   }
 
