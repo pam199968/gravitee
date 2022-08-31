@@ -170,6 +170,18 @@ job "gravitee-apim-gateway" {
 	        data = <<EOD
 management:
   type: mongodb                  # repository type
+services:
+  sync:
+    delay: 5000
+    unit: MILLISECONDS
+    distributed: false
+    bulk_items: 100
+  monitoring:
+    delay: 500
+    unit: MILLISECONDS
+    distributed: false
+  metrics:
+    enabled: false
 ratelimit:
   type: mongodb
 cache:
