@@ -184,10 +184,10 @@ gravitee_services_core_http_authentication_users_{{ with secret "services-infras
 gravitee_services_core_http_authentication_users_admin=
 gravitee_services_metrics_enabled=true
 # add class & methods to groovy whitelist
-groovy_whitelist_mode=append
-groovy_whitelist_list_0=class groovy.util.slurpersupport.Node
-groovy_whitelist_list_1=class groovy.util.slurpersupport.NodeChild
-groovy_whitelist_list_2=class groovy.util.XmlSlurper
+groovy.whitelist.mode=append
+groovy.whitelist.list[0]=class groovy.util.slurpersupport.Node
+groovy.whitelist.list[1]=class groovy.util.slurpersupport.NodeChild
+groovy.whitelist.list[2]=class groovy.util.XmlSlurper
 _JAVA_OPTIONS="-Xdebug -Xrunjdwp:transport=dt_socket,server=y,suspend=n,address=0.0.0.0:5005"
 # Le heartbeat est en doublon avec Nomad et se marie mal avec l'allocation dynamique
 gravitee_services_heartbeat_enabled=false
