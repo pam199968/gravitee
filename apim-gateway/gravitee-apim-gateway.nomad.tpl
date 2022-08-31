@@ -170,6 +170,10 @@ job "gravitee-apim-gateway" {
 	        data = <<EOD
 management:
   type: mongodb                  # repository type
+  mongodb:
+    dbname: $\u007Bds.mongodb.dbname\u007D # mongodb name (default gravitee)
+    host: $\u007Bds.mongodb.host\u007D     # mongodb host (default localhost)
+    port: $\u007Bds.mongodb.port\u007D     # mongodb port (default 27017)
 services:
   sync:
     delay: 5000
