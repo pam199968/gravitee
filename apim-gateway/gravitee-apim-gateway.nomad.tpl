@@ -171,9 +171,8 @@ job "gravitee-apim-gateway" {
 management:
   type: mongodb                  # repository type
   mongodb:
-    dbname: $\u007Bds.mongodb.dbname\u007D # mongodb name (default gravitee)
-    host: $\u007Bds.mongodb.host\u007D     # mongodb host (default localhost)
-    port: $\u007Bds.mongodb.port\u007D     # mongodb port (default 27017)
+    host: {{ range service "gravitee-mongodb" }}{{.Address}}{{end}}
+    port: {{ range service "gravitee-mongodb" }}{{.Port}}{{end}}
 services:
   sync:
     delay: 5000
@@ -186,6 +185,11 @@ services:
     distributed: false
   metrics:
     enabled: false
+reporters:
+  elasticsearch:
+    enabled: true
+    endpoints:
+      - http://{{ range service "gravitee-elasticsearch" }}{{.Address}}:{{.Port}}{{end}}
 ratelimit:
   type: mongodb
 cache:
