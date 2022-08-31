@@ -170,6 +170,10 @@ job "gravitee-apim-gateway" {
 	        data = <<EOD
 management:
   type: mongodb                  # repository type
+ratelimit:
+  type: mongodb
+cache:
+  type: ehcache
 groovy:
   whitelist:
     mode: append
