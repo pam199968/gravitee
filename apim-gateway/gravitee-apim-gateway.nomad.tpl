@@ -149,15 +149,6 @@ job "gravitee-apim-gateway" {
 				propagation = "rshared"
 				}
 			}
-		mount {
-			type = "bind"
-			target = "/opt/graviteeio-gateway/config/gravitee.yml"
-			source = "local/gravitee.yml"
-			readonly = false
-			bind_options {
-				propagation = "rshared"
-				}
-			}
 		}
 
 
