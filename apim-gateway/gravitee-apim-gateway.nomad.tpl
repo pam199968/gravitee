@@ -172,9 +172,9 @@ groovy:
   whitelist:
     mode: append
     list:
-	  class groovy.util.slurpersupport.Node
-	  class groovy.util.slurpersupport.NodeChild
-	  class groovy.util.XmlSlurper				
+      - class groovy.util.slurpersupport.Node
+      - class groovy.util.slurpersupport.NodeChild
+      - class groovy.util.XmlSlurper				
 EOD
                destination = "local/gravitee.yml"
 	    }
