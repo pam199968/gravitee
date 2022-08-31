@@ -197,6 +197,7 @@ EOD
                 "groovy.whitelist.list[1]" = "class groovy.util.slurpersupport.NodeChild"
                 "groovy.whitelist.list[2]" = "class groovy.util.XmlSlurper"
                 "groovy.whitelist.list[3]" = "class groovy.util.XmlParser"
+                "groovy.whitelist.list[4]" = "class groovy.util.slurpersupport.GPathResult"
 	    }
 
             service {
