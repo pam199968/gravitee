@@ -149,6 +149,15 @@ job "gravitee-apim-gateway" {
 				propagation = "rshared"
 				}
 			}
+		mount {
+			type = "bind"
+			target = "/opt/graviteeio-gateway/config/gravitee.yml"
+			source = "local/gravitee.yml"
+			readonly = false
+			bind_options {
+				propagation = "rshared"
+				}
+			}
 		}
 
 
@@ -156,6 +165,19 @@ job "gravitee-apim-gateway" {
                 cpu = 1000
                 memory = 2000
             }
+	    
+	    template {
+	        data = <<EOD
+groovy:
+  whitelist:
+    mode: append
+    list:
+	  class groovy.util.slurpersupport.Node
+	  class groovy.util.slurpersupport.NodeChild
+	  class groovy.util.XmlSlurper				
+EOD
+               destination = "local/gravitee.yml"
+	    }
 
             template {
                 data = <<EOD
