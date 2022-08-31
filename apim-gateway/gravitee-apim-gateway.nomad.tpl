@@ -240,10 +240,10 @@ EOD
             }
 	    
 	    env = {
-                groovy_whitelist_mode = "append"
-                groovy.whitelist.list[0] = "class groovy.util.slurpersupport.Node"
-                groovy.whitelist.list[1] = "class groovy.util.slurpersupport.NodeChild"
-                groovy.whitelist.list[2] = "class groovy.util.XmlSlurper"
+                "groovy.whitelist.mode" = "append"
+                "groovy.whitelist.list[0]" = "class groovy.util.slurpersupport.Node"
+                "groovy.whitelist.list[1]" = "class groovy.util.slurpersupport.NodeChild"
+                "groovy.whitelist.list[2]" = "class groovy.util.XmlSlurper"
 	    }
 
             service {
