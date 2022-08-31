@@ -165,45 +165,6 @@ job "gravitee-apim-gateway" {
                 cpu = 1000
                 memory = 2000
             }
-	    
-	    template {
-	        data = <<EOD
-management:
-  type: mongodb                  # repository type
-  mongodb:
-    host: {{ range service "gravitee-mongodb" }}{{.Address}}{{end}}
-    port: {{ range service "gravitee-mongodb" }}{{.Port}}{{end}}
-services:
-  sync:
-    delay: 5000
-    unit: MILLISECONDS
-    distributed: false
-    bulk_items: 100
-  monitoring:
-    delay: 500
-    unit: MILLISECONDS
-    distributed: false
-  metrics:
-    enabled: false
-reporters:
-  elasticsearch:
-    enabled: true
-    endpoints:
-      - http://{{ range service "gravitee-elasticsearch" }}{{.Address}}:{{.Port}}{{end}}
-ratelimit:
-  type: mongodb
-cache:
-  type: ehcache
-groovy:
-  whitelist:
-    mode: append
-    list:
-      - class groovy.util.slurpersupport.Node
-      - class groovy.util.slurpersupport.NodeChild
-      - class groovy.util.XmlSlurper				
-EOD
-               destination = "local/gravitee.yml"
-	    }
 
             template {
                 data = <<EOD
