@@ -170,11 +170,6 @@ job "gravitee-apim-gateway" {
 	        data = <<EOD
 management:
   type: mongodb                  # repository type
-  mongodb:                       # mongodb repository
-#    prefix:                      # collections prefix
-    dbname: ${ds.mongodb.dbname} # mongodb name (default gravitee)
-    host: ${ds.mongodb.host}     # mongodb host (default localhost)
-    port: ${ds.mongodb.port}     # mongodb port (default 27017)
 groovy:
   whitelist:
     mode: append
