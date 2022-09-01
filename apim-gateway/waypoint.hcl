@@ -22,7 +22,7 @@ app "gravitee/apim-gateway" {
     build {
         use "docker-pull" {
             image = "graviteeio/apim-gateway"
-            tag   = "3.15.7"
+            tag   = "3.18.7"
             disable_entrypoint = true
         }
     }
