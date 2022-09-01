@@ -185,7 +185,7 @@ gravitee_services_core_http_authentication_users_admin=
 gravitee_services_metrics_enabled=true
 _JAVA_OPTIONS="-Xdebug -Xrunjdwp:transport=dt_socket,server=y,suspend=n,address=0.0.0.0:5005"
 # Le heartbeat est en doublon avec Nomad et se marie mal avec l'allocation dynamique
-gravitee_services_heartbeat_enabled=false
+gravitee_services_heartbeat_enabled=true
 EOD
                 destination = "secrets/.env"
                 env = true
