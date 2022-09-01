@@ -35,7 +35,7 @@ app "gravitee/apim-gateway-bridge" {
                 user_java_opts = var.user_java_opts
                 apim_gateway_bridge_fqdn = var.apim_gateway_bridge_fqdn
                 image = "graviteeio/apim-gateway"
-                tag = "3.15.7"
+                tag = "3.18.7"
             })
         }
     }
