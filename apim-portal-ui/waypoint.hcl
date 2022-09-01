@@ -34,7 +34,7 @@ app "gravitee/apim-portal-ui" {
                 datacenter = var.datacenter
 				portal_ui_fqdn = var.portal_ui_fqdn
 				image = "graviteeio/apim-portal-ui"
-				tag = "3.15.7"
+				tag = "3.18.7"
             })
         }
     }
