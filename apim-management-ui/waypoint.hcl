@@ -35,7 +35,7 @@ app "gravitee/apim-management-ui" {
                 apim_ui_fqdn = var.apim_ui_fqdn
                 user_java_opts = var.user_java_opts
                 image = "graviteeio/apim-management-ui"
-                tag = "3.15.7"
+                tag = "3.18.7"
             })
         }
     }
