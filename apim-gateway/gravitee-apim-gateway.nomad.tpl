@@ -198,7 +198,6 @@ EOD
                 "groovy.whitelist.list[2]" = "class groovy.util.XmlSlurper"
                 "groovy.whitelist.list[3]" = "class groovy.util.XmlParser"
                 "groovy.whitelist.list[4]" = "class groovy.util.slurpersupport.GPathResult"
-		"JAVA_TOOL_OPTIONS" = "-Xdebug -Xrunjdwp:transport=dt_socket,server=y,suspend=n,address=5005 -Xnoagent"
 	    }
 
             service {
