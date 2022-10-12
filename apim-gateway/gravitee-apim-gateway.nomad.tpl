@@ -71,19 +71,19 @@ job "gravitee-apim-gateway" {
 	    	source = "http://repo.proxy-dev-forge.asip.hst.fluxus.net/artifactory/asip-snapshots/fr/ans/psc/generateVIHF/1.5-SNAPSHOT/JDV_J65-SubjectRole-DMP.xml"
 	    }
 	    artifact {
-	    	source = "http://repo.proxy-dev-forge.asip.hst.fluxus.net/artifactory/asip-snapshots/fr/ans/psc/digitalsign-gravitee-resource/1.1-SNAPSHOT/digitalsign-gravitee-resource-1.1-SNAPSHOT.zip"
+	    	source = "http://repo.proxy-dev-forge.asip.hst.fluxus.net/artifactory/asip-snapshots/fr/ans/psc/digitalsign-gravitee-resource/1.0-SNAPSHOT/digitalsign-gravitee-resource-1.0-SNAPSHOT.zip"
 		options {
 			archive = false
 		}
 	    }
 	    artifact {
-	    	source = "http://repo.proxy-dev-forge.asip.hst.fluxus.net/artifactory/asip-snapshots/fr/ans/psc/digitalsign-gravitee-policy/1.1-SNAPSHOT/digitalsign-gravitee-policy-1.1-SNAPSHOT.zip"
+	    	source = "http://repo.proxy-dev-forge.asip.hst.fluxus.net/artifactory/asip-snapshots/fr/ans/psc/digitalsign-gravitee-policy/1.0-SNAPSHOT/digitalsign-gravitee-policy-1.0-SNAPSHOT.zip"
 		options {
 			archive = false
 		}
 	    }
 	    artifact {
-	    	source = "http://repo.proxy-dev-forge.asip.hst.fluxus.net/artifactory/asip-snapshots/fr/ans/psc/digital-sign-resource-api/1.1-SNAPSHOT/digital-sign-resource-api-1.1-SNAPSHOT.jar"
+	    	source = "http://repo.proxy-dev-forge.asip.hst.fluxus.net/artifactory/asip-snapshots/fr/ans/psc/digital-sign-resource-api/1.0-SNAPSHOT/digital-sign-resource-api-1.0-SNAPSHOT.jar"
 		options {
 			archive = false
 		}
@@ -124,8 +124,8 @@ job "gravitee-apim-gateway" {
 			}
 		mount {
 			type = "bind"
-			target = "/opt/graviteeio-gateway/plugins/digitalsign-gravitee-resource-1.1-SNAPSHOT.zip"
-			source = "local/digitalsign-gravitee-resource-1.1-SNAPSHOT.zip"
+			target = "/opt/graviteeio-gateway/plugins/digitalsign-gravitee-resource-1.0-SNAPSHOT.zip"
+			source = "local/digitalsign-gravitee-resource-1.0-SNAPSHOT.zip"
 			readonly = false
 			bind_options {
 				propagation = "rshared"
@@ -133,8 +133,8 @@ job "gravitee-apim-gateway" {
 			}
 		mount {
 			type = "bind"
-			target = "/opt/graviteeio-gateway/plugins/digitalsign-gravitee-policy-1.1-SNAPSHOT.zip"
-			source = "local/digitalsign-gravitee-policy-1.1-SNAPSHOT.zip"
+			target = "/opt/graviteeio-gateway/plugins/digitalsign-gravitee-policy-1.0-SNAPSHOT.zip"
+			source = "local/digitalsign-gravitee-policy-1.0-SNAPSHOT.zip"
 			readonly = false
 			bind_options {
 				propagation = "rshared"
@@ -142,8 +142,8 @@ job "gravitee-apim-gateway" {
 			}
 		mount {
 			type = "bind"
-			target = "/opt/graviteeio-gateway/lib/digital-sign-resource-api-1.1-SNAPSHOT.jar"
-			source = "local/digital-sign-resource-api-1.1-SNAPSHOT.jar"
+			target = "/opt/graviteeio-gateway/lib/digital-sign-resource-api-1.0-SNAPSHOT.jar"
+			source = "local/digital-sign-resource-api-1.0-SNAPSHOT.jar"
 			readonly = false
 			bind_options {
 				propagation = "rshared"
