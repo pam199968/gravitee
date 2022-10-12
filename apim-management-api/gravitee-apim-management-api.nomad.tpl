@@ -81,8 +81,8 @@ job "gravitee-apim-management-api" {
 		}
 		mount {
 			type = "bind"
-			target = "/opt/graviteeio-management-api/plugins/digitalsign-gravitee-resource-1.0-SNAPSHOT.zip"
-			source = "local/digitalsign-gravitee-resource-1.0-SNAPSHOT.zip"
+			target = "/opt/graviteeio-management-api/plugins/digitalsign-gravitee-resource-1.1-SNAPSHOT.zip"
+			source = "local/digitalsign-gravitee-resource-1.1-SNAPSHOT.zip"
 			readonly = false
 			bind_options {
 				propagation = "rshared"
@@ -90,8 +90,8 @@ job "gravitee-apim-management-api" {
 		}
 		mount {
 			type = "bind"
-			target = "/opt/graviteeio-management-api/plugins/digitalsign-gravitee-policy-1.0-SNAPSHOT.zip"
-			source = "local/digitalsign-gravitee-policy-1.0-SNAPSHOT.zip"
+			target = "/opt/graviteeio-management-api/plugins/digitalsign-gravitee-policy-1.1-SNAPSHOT.zip"
+			source = "local/digitalsign-gravitee-policy-1.1-SNAPSHOT.zip"
 			readonly = false
 			bind_options {
 				propagation = "rshared"
@@ -99,8 +99,8 @@ job "gravitee-apim-management-api" {
 		}
 		mount {
 			type = "bind"
-			target = "/opt/graviteeio-management-api/lib/digital-sign-resource-api-1.0-SNAPSHOT.jar"
-			source = "local/digital-sign-resource-api-1.0-SNAPSHOT.jar"
+			target = "/opt/graviteeio-management-api/lib/digital-sign-resource-api-1.1-SNAPSHOT.jar"
+			source = "local/digital-sign-resource-api-1.1-SNAPSHOT.jar"
 			readonly = false
 			bind_options {
 				propagation = "rshared"
