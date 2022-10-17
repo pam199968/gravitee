@@ -77,13 +77,13 @@ job "gravitee-apim-gateway" {
 		}
 	    }
 	    artifact {
-	    	source = "http://repo.proxy-dev-forge.asip.hst.fluxus.net/artifactory/asip-snapshots/fr/ans/psc/digitalsign-gravitee-policy/1.1.2-SNAPSHOT/digitalsign-gravitee-policy-1.1-SNAPSHOT.zip"
+	    	source = "http://repo.proxy-dev-forge.asip.hst.fluxus.net/artifactory/asip-snapshots/fr/ans/psc/digitalsign-gravitee-policy/1.1.2-SNAPSHOT/digitalsign-gravitee-policy-1.1.2-SNAPSHOT.zip"
 		options {
 			archive = false
 		}
 	    }
 	    artifact {
-	    	source = "http://repo.proxy-dev-forge.asip.hst.fluxus.net/artifactory/asip-snapshots/fr/ans/psc/digital-sign-resource-api/1.1-SNAPSHOT/digital-sign-resource-api-1.1.2-SNAPSHOT.jar"
+	    	source = "http://repo.proxy-dev-forge.asip.hst.fluxus.net/artifactory/asip-snapshots/fr/ans/psc/digital-sign-resource-api/1.1-SNAPSHOT/digital-sign-resource-api-1.1-SNAPSHOT.jar"
 		options {
 			archive = false
 		}
