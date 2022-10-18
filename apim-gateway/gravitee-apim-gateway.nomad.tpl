@@ -77,7 +77,7 @@ job "gravitee-apim-gateway" {
 		}
 	    }
 	    artifact {
-	    	source = "http://repo.proxy-dev-forge.asip.hst.fluxus.net/artifactory/asip-snapshots/fr/ans/psc/digitalsign-gravitee-policy/1.1.2-SNAPSHOT/digitalsign-gravitee-policy-1.1.2-SNAPSHOT.zip"
+	    	source = "http://repo.proxy-dev-forge.asip.hst.fluxus.net/artifactory/asip-snapshots/fr/ans/psc/digitalsign-gravitee-policy/1.1.3-SNAPSHOT/digitalsign-gravitee-policy-1.1.3-SNAPSHOT.zip"
 		options {
 			archive = false
 		}
@@ -133,8 +133,8 @@ job "gravitee-apim-gateway" {
 			}
 		mount {
 			type = "bind"
-			target = "/opt/graviteeio-gateway/plugins/digitalsign-gravitee-policy-1.1.2-SNAPSHOT.zip"
-			source = "local/digitalsign-gravitee-policy-1.1.2-SNAPSHOT.zip"
+			target = "/opt/graviteeio-gateway/plugins/digitalsign-gravitee-policy-1.1.3-SNAPSHOT.zip"
+			source = "local/digitalsign-gravitee-policy-1.1.3-SNAPSHOT.zip"
 			readonly = false
 			bind_options {
 				propagation = "rshared"
