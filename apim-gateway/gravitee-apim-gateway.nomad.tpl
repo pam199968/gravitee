@@ -143,7 +143,7 @@ job "gravitee-apim-gateway" {
 		mount {
 			type = "bind"
 			target = "/opt/graviteeio-gateway/lib/digital-sign-resource-api-1.3-SNAPSHOT.jar"
-			source = "local/digital-sign-resource-api-1.1-SNAPSHOT.jar"
+			source = "local/digital-sign-resource-api-1.3-SNAPSHOT.jar"
 			readonly = false
 			bind_options {
 				propagation = "rshared"
