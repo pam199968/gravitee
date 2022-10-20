@@ -42,13 +42,13 @@ job "gravitee-apim-management-api" {
 		}
 	    }
 	    artifact {
-	    	source	= "http://repo.proxy-dev-forge.asip.hst.fluxus.net/artifactory/asip-snapshots/fr/ans/psc/digitalsign-gravitee-policy/1.1.1-SNAPSHOT/digitalsign-gravitee-policy-1.1.1-SNAPSHOT.zip"
+	    	source	= "http://repo.proxy-dev-forge.asip.hst.fluxus.net/artifactory/asip-snapshots/fr/ans/psc/digitalsign-gravitee-policy/1.1.3-SNAPSHOT/digitalsign-gravitee-policy-1.1.3-SNAPSHOT.zip"
 		options {
 			archive = false
 		}
 	    }
 	    artifact {
-	    	source = "http://repo.proxy-dev-forge.asip.hst.fluxus.net/artifactory/asip-snapshots/fr/ans/psc/digital-sign-resource-api/1.1-SNAPSHOT/digital-sign-resource-api-1.1-SNAPSHOT.jar"
+	    	source = "http://repo.proxy-dev-forge.asip.hst.fluxus.net/artifactory/asip-snapshots/fr/ans/psc/digital-sign-resource-api/1.3-SNAPSHOT/digital-sign-resource-api-1.3-SNAPSHOT.jar"
 		options {
 			archive = false
 		}
@@ -90,8 +90,8 @@ job "gravitee-apim-management-api" {
 		}
 		mount {
 			type = "bind"
-			target = "/opt/graviteeio-management-api/plugins/digitalsign-gravitee-policy-1.1.1-SNAPSHOT.zip"
-			source = "local/digitalsign-gravitee-policy-1.1.1-SNAPSHOT.zip"
+			target = "/opt/graviteeio-management-api/plugins/digitalsign-gravitee-policy-1.1.3-SNAPSHOT.zip"
+			source = "local/digitalsign-gravitee-policy-1.1.3-SNAPSHOT.zip"
 			readonly = false
 			bind_options {
 				propagation = "rshared"
@@ -99,8 +99,8 @@ job "gravitee-apim-management-api" {
 		}
 		mount {
 			type = "bind"
-			target = "/opt/graviteeio-management-api/lib/digital-sign-resource-api-1.1-SNAPSHOT.jar"
-			source = "local/digital-sign-resource-api-1.1-SNAPSHOT.jar"
+			target = "/opt/graviteeio-management-api/lib/digital-sign-resource-api-1.3-SNAPSHOT.jar"
+			source = "local/digital-sign-resource-api-1.3-SNAPSHOT.jar"
 			readonly = false
 			bind_options {
 				propagation = "rshared"
